@@ -9,6 +9,8 @@ import Foundation
 
 struct Constants {
     
+    static let Home_Screen_Title = "Users"
+    
     struct APIConstants {
         static let UsersListUrl = "https://jsonplaceholder.typicode.com/users"
     }

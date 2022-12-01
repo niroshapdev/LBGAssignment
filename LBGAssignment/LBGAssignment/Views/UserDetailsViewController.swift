@@ -28,6 +28,7 @@ class UserDetailsViewController: UIViewController {
 extension UserDetailsViewController {
     func setupUI() {
         guard let user = user else { return }
+        self.navigationItem.title = user.username
         userName.text = user.username
         company.text = user.company?.name ?? ""
         phone.text = user.phone

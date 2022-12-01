@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -181,8 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				C4889CE32937598100E03D35 /* BaseViewController.swift */,
-				C4889CE42937598100E03D35 /* UserDetailsViewController.swift */,
 				C4889CE52937598100E03D35 /* UserListViewController.swift */,
+				C4889CE42937598100E03D35 /* UserDetailsViewController.swift */,
 				C4889CE62937598100E03D35 /* CustomCell */,
 			);
 			path = Views;
@@ -254,7 +254,7 @@
 				};
 			};
 			buildConfigurationList = C4889C9E2937594E00E03D35 /* Build configuration list for PBXProject "LBGAssignment" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -416,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -470,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -549,7 +549,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBGAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LBGAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBGAssignment.app/LBGAssignment";
 			};
 			name = Debug;
 		};
@@ -568,7 +568,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBGAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LBGAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBGAssignment.app/LBGAssignment";
 			};
 			name = Release;
 		};

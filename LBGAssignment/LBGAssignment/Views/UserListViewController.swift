@@ -17,6 +17,7 @@ class UserListViewController: BaseViewController {
         super.viewDidLoad()
         tableView?.delegate = self
         tableView?.dataSource = self
+       
         updateUI()
     }
     
@@ -27,7 +28,7 @@ class UserListViewController: BaseViewController {
                 
                 self.hideActivityIndicator()
                 if let error = self.viewModel.error{
-                    self.showAlert(message: error.localizedDescription)
+                    self.showAlert(message: error.description())
                     return
                 }
                 self.tableView?.reloadData()
@@ -37,6 +38,7 @@ class UserListViewController: BaseViewController {
     }
     
     func updateUI(){
+        self.navigationItem.title = Constants.Home_Screen_Title
         self.showActivityIndicator()
         initailizeCompletion()
         viewModel.getUserList()
