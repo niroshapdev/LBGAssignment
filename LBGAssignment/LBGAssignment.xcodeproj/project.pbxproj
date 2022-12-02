@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		0E2E52DC9FB0F27FF8F73166 /* Pods_LBGAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36E5A9717EAC62FA3ECB0F2 /* Pods_LBGAssignment.framework */; };
 		16E0C66F1D05CC8D5D322633 /* Pods_LBGAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EDD1E44DDA6891F23CAAFF /* Pods_LBGAssignmentTests.framework */; };
-		C46D0FA429376B1E000DE8E5 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = C4889CD82937597F00E03D35 /* Users.json */; };
-		C46D0FA929376DF7000DE8E5 /* Users_Invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */; };
-		C46D0FAB29376EB5000DE8E5 /* Users_Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */; };
 		C46D0FAC29376EB5000DE8E5 /* Users_Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */; };
 		C46D0FAE29378BBD000DE8E5 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */; };
 		C47E672D2939DE340008D3C0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E672C2939DE340008D3C0 /* APIError.swift */; };
 		C47E672E2939DE470008D3C0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E672C2939DE340008D3C0 /* APIError.swift */; };
+		C47E67412939E58B0008D3C0 /* Users_Invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */; };
 		C4889CA72937594E00E03D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CA62937594E00E03D35 /* AppDelegate.swift */; };
 		C4889CAE2937594E00E03D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAC2937594E00E03D35 /* Main.storyboard */; };
 		C4889CB02937595000E03D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAF2937595000E03D35 /* Assets.xcassets */; };
@@ -26,7 +24,6 @@
 		C4889CEC2937598100E03D35 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = C4889CD82937597F00E03D35 /* Users.json */; };
 		C4889CEE2937598100E03D35 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDA2937597F00E03D35 /* NetworkManager.swift */; };
 		C4889CEF2937598100E03D35 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDA2937597F00E03D35 /* NetworkManager.swift */; };
-		C4889CF12937598100E03D35 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDB2937597F00E03D35 /* LocalManager.swift */; };
 		C4889CF22937598100E03D35 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDB2937597F00E03D35 /* LocalManager.swift */; };
 		C4889CF42937598100E03D35 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDC2937597F00E03D35 /* Endpoint.swift */; };
 		C4889CF52937598100E03D35 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDC2937597F00E03D35 /* Endpoint.swift */; };
@@ -126,6 +123,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C47E67402939E54F0008D3C0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C4889CDB2937597F00E03D35 /* LocalManager.swift */,
+				C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */,
+				C4889CD82937597F00E03D35 /* Users.json */,
+				C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C4889C9A2937594E00E03D35 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +174,7 @@
 		C4889CBC2937595000E03D35 /* LBGAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				C47E67402939E54F0008D3C0 /* Helpers */,
 				C4889CBD2937595000E03D35 /* LBGAssignmentTests.swift */,
 				C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */,
 			);
@@ -175,11 +184,8 @@
 		C4889CD62937597F00E03D35 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */,
 				C4889CD72937597F00E03D35 /* Constants.swift */,
 				C47E672C2939DE340008D3C0 /* APIError.swift */,
-				C4889CD82937597F00E03D35 /* Users.json */,
-				C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -188,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				C4889CDA2937597F00E03D35 /* NetworkManager.swift */,
-				C4889CDB2937597F00E03D35 /* LocalManager.swift */,
 				C4889CDC2937597F00E03D35 /* Endpoint.swift */,
 			);
 			path = HTTPService;
@@ -313,11 +318,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46D0FA429376B1E000DE8E5 /* Users.json in Resources */,
-				C46D0FAB29376EB5000DE8E5 /* Users_Empty.json in Resources */,
 				C4889CB32937595000E03D35 /* LaunchScreen.storyboard in Resources */,
 				C4889CB02937595000E03D35 /* Assets.xcassets in Resources */,
-				C46D0FA929376DF7000DE8E5 /* Users_Invalid.json in Resources */,
 				C4889CAE2937594E00E03D35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46D0FAC29376EB5000DE8E5 /* Users_Empty.json in Resources */,
+				C47E67412939E58B0008D3C0 /* Users_Invalid.json in Resources */,
 				C4889CEC2937598100E03D35 /* Users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +414,6 @@
 				C4889CF72937598100E03D35 /* User.swift in Sources */,
 				C4889D062937598100E03D35 /* UserListViewController.swift in Sources */,
 				C4889CE82937598100E03D35 /* Constants.swift in Sources */,
-				C4889CF12937598100E03D35 /* LocalManager.swift in Sources */,
 				C4889CFD2937598100E03D35 /* UserListViewModel.swift in Sources */,
 				C4889D092937598100E03D35 /* UserListCustomCell.swift in Sources */,
 			);

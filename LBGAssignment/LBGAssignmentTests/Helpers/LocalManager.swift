@@ -27,8 +27,8 @@ class LocalManager: HTTPService {
         self.jsonType = jsonType
     }
     func getData <T: Decodable>(_ endpoint: EndPoint, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
-        let urlStr = Bundle.main.url(forResource: jsonType.getFileName, withExtension: "json")
-        guard let url = urlStr else {
+        guard let testBundle = Bundle(identifier: "com.tcs.LBGAssignmentTests"),
+              let url = testBundle.url(forResource: jsonType.getFileName, withExtension: "json") else {
             return
         }
         do {
