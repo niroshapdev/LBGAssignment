@@ -19,19 +19,3 @@ struct Constants {
         static let UserDetailsViewControllerIdentifier = "UserDetailsViewController"
     }
 }
-
-enum APIError: Error, Equatable {
-    case urlError
-    case noData
-    case custom(description: String)
-    func description() -> String {
-        switch self {
-        case .urlError:
-            return "URL Error"
-        case .custom(let description):
-            return "Custom Error : \(description)"
-        case .noData:
-            return "Error in retrieving the data"
-        }
-    }
-}

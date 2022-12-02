@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class UserListViewController: BaseViewController {
-    var viewModel = UserListViewModel()
-    @IBOutlet weak var tableView: UITableView?
+    private var viewModel = UserListViewModel()
+    @IBOutlet private weak var tableView: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView?.delegate = self
@@ -30,7 +30,7 @@ class UserListViewController: BaseViewController {
             }
         }
     }
-    func updateUI() {
+    private func updateUI() {
         self.navigationItem.title = Constants.UsersHomeScreenTitle
         self.showActivityIndicator()
         initailizeCompletion()
