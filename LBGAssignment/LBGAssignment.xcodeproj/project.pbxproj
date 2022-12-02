@@ -16,6 +16,8 @@
 		C47E67412939E58B0008D3C0 /* Users_Invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */; };
 		C47E67452939EA000008D3C0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E67442939EA000008D3C0 /* Utils.swift */; };
 		C47E67462939EFB30008D3C0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E67442939EA000008D3C0 /* Utils.swift */; };
+		C47E674E2939FA490008D3C0 /* LBGAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E674D2939FA490008D3C0 /* LBGAssignmentUITests.swift */; };
+		C47E67502939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E674F2939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift */; };
 		C4889CA72937594E00E03D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CA62937594E00E03D35 /* AppDelegate.swift */; };
 		C4889CAE2937594E00E03D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAC2937594E00E03D35 /* Main.storyboard */; };
 		C4889CB02937595000E03D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAF2937595000E03D35 /* Assets.xcassets */; };
@@ -44,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C47E67512939FA490008D3C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4889C9B2937594E00E03D35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4889CA22937594E00E03D35;
+			remoteInfo = LBGAssignment;
+		};
 		C4889CBA2937595000E03D35 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4889C9B2937594E00E03D35 /* Project object */;
@@ -63,6 +72,9 @@
 		C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		C47E672C2939DE340008D3C0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		C47E67442939EA000008D3C0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C47E674B2939FA490008D3C0 /* LBGAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBGAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47E674D2939FA490008D3C0 /* LBGAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBGAssignmentUITests.swift; sourceTree = "<group>"; };
+		C47E674F2939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBGAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4889CA32937594E00E03D35 /* LBGAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBGAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4889CA62937594E00E03D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4889CAD2937594E00E03D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +99,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C47E67482939FA490008D3C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4889CA02937594E00E03D35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,11 +156,21 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		C47E674C2939FA490008D3C0 /* LBGAssignmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C47E674D2939FA490008D3C0 /* LBGAssignmentUITests.swift */,
+				C47E674F2939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift */,
+			);
+			path = LBGAssignmentUITests;
+			sourceTree = "<group>";
+		};
 		C4889C9A2937594E00E03D35 = {
 			isa = PBXGroup;
 			children = (
 				C4889CA52937594E00E03D35 /* LBGAssignment */,
 				C4889CBC2937595000E03D35 /* LBGAssignmentTests */,
+				C47E674C2939FA490008D3C0 /* LBGAssignmentUITests */,
 				C4889CA42937594E00E03D35 /* Products */,
 				B3E02EF3E1B9BFFDEB946F95 /* Pods */,
 				5318B7C4581F195298F82D3A /* Frameworks */,
@@ -153,6 +182,7 @@
 			children = (
 				C4889CA32937594E00E03D35 /* LBGAssignment.app */,
 				C4889CB92937595000E03D35 /* LBGAssignmentTests.xctest */,
+				C47E674B2939FA490008D3C0 /* LBGAssignmentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +271,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C47E674A2939FA490008D3C0 /* LBGAssignmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47E67532939FA490008D3C0 /* Build configuration list for PBXNativeTarget "LBGAssignmentUITests" */;
+			buildPhases = (
+				C47E67472939FA490008D3C0 /* Sources */,
+				C47E67482939FA490008D3C0 /* Frameworks */,
+				C47E67492939FA490008D3C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C47E67522939FA490008D3C0 /* PBXTargetDependency */,
+			);
+			name = LBGAssignmentUITests;
+			productName = LBGAssignmentUITests;
+			productReference = C47E674B2939FA490008D3C0 /* LBGAssignmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C4889CA22937594E00E03D35 /* LBGAssignment */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4889CCD2937595100E03D35 /* Build configuration list for PBXNativeTarget "LBGAssignment" */;
@@ -286,9 +334,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					C47E674A2939FA490008D3C0 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = C4889CA22937594E00E03D35;
+					};
 					C4889CA22937594E00E03D35 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -313,11 +365,19 @@
 			targets = (
 				C4889CA22937594E00E03D35 /* LBGAssignment */,
 				C4889CB82937595000E03D35 /* LBGAssignmentTests */,
+				C47E674A2939FA490008D3C0 /* LBGAssignmentUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C47E67492939FA490008D3C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4889CA12937594E00E03D35 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +465,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C47E67472939FA490008D3C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47E674E2939FA490008D3C0 /* LBGAssignmentUITests.swift in Sources */,
+				C47E67502939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4889C9F2937594E00E03D35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +517,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C47E67522939FA490008D3C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4889CA22937594E00E03D35 /* LBGAssignment */;
+			targetProxy = C47E67512939FA490008D3C0 /* PBXContainerItemProxy */;
+		};
 		C4889CBB2937595000E03D35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C4889CA22937594E00E03D35 /* LBGAssignment */;
@@ -475,6 +549,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C47E67542939FA490008D3C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tcs.LBGAssignmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LBGAssignment;
+			};
+			name = Debug;
+		};
+		C47E67552939FA490008D3C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tcs.LBGAssignmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LBGAssignment;
+			};
+			name = Release;
+		};
 		C4889CCB2937595100E03D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -694,6 +802,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C47E67532939FA490008D3C0 /* Build configuration list for PBXNativeTarget "LBGAssignmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47E67542939FA490008D3C0 /* Debug */,
+				C47E67552939FA490008D3C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4889C9E2937594E00E03D35 /* Build configuration list for PBXProject "LBGAssignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

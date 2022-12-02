@@ -31,6 +31,7 @@ class UserListViewController: BaseViewController {
         }
     }
     private func updateUI() {
+        tableView?.accessibilityIdentifier = "UserListIdentifier"
         self.navigationItem.title = Constants.UsersHomeScreenTitle
         self.showActivityIndicator()
         initailizeCompletion()
@@ -47,6 +48,7 @@ extension UserListViewController: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
+        userCell.accessibilityIdentifier = "userCell_\(indexPath.row)"
         userCell.nameLabel?.text = viewModel.users?[indexPath.row].name
         userCell.emailLabel?.text = viewModel.users?[indexPath.row].email
         return userCell
