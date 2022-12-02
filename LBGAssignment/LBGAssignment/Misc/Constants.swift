@@ -9,6 +9,7 @@ import Foundation
 
 struct Constants {
     static let UsersHomeScreenTitle = "Users"
+    static let JailBrokenError = "This device is jail broken"
     struct APIConstants {
         static let UsersListUrl = "https://jsonplaceholder.typicode.com/users"
     }

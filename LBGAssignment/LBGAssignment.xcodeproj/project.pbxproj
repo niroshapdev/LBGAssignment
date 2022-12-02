@@ -15,6 +15,7 @@
 		C47E672E2939DE470008D3C0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E672C2939DE340008D3C0 /* APIError.swift */; };
 		C47E67412939E58B0008D3C0 /* Users_Invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */; };
 		C47E67452939EA000008D3C0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E67442939EA000008D3C0 /* Utils.swift */; };
+		C47E67462939EFB30008D3C0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E67442939EA000008D3C0 /* Utils.swift */; };
 		C4889CA72937594E00E03D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CA62937594E00E03D35 /* AppDelegate.swift */; };
 		C4889CAE2937594E00E03D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAC2937594E00E03D35 /* Main.storyboard */; };
 		C4889CB02937595000E03D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAF2937595000E03D35 /* Assets.xcassets */; };
@@ -161,7 +162,7 @@
 			children = (
 				C4889CDD2937598000E03D35 /* Models */,
 				C4889CD92937597F00E03D35 /* HTTPService */,
-				C4889CD62937597F00E03D35 /* Utils */,
+				C4889CD62937597F00E03D35 /* Misc */,
 				C4889CE02937598100E03D35 /* ViewModel */,
 				C4889CE22937598100E03D35 /* Views */,
 				C4889CA62937594E00E03D35 /* AppDelegate.swift */,
@@ -183,14 +184,14 @@
 			path = LBGAssignmentTests;
 			sourceTree = "<group>";
 		};
-		C4889CD62937597F00E03D35 /* Utils */ = {
+		C4889CD62937597F00E03D35 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
 				C4889CD72937597F00E03D35 /* Constants.swift */,
 				C47E672C2939DE340008D3C0 /* APIError.swift */,
 				C47E67442939EA000008D3C0 /* Utils.swift */,
 			);
-			path = Utils;
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		C4889CD92937597F00E03D35 /* HTTPService */ = {
@@ -430,6 +431,7 @@
 				C4889D042937598100E03D35 /* UserDetailsViewController.swift in Sources */,
 				C4889D072937598100E03D35 /* UserListViewController.swift in Sources */,
 				C4889CEF2937598100E03D35 /* NetworkManager.swift in Sources */,
+				C47E67462939EFB30008D3C0 /* Utils.swift in Sources */,
 				C4889CFE2937598100E03D35 /* UserListViewModel.swift in Sources */,
 				C4889CBE2937595000E03D35 /* LBGAssignmentTests.swift in Sources */,
 				C4889D0A2937598100E03D35 /* UserListCustomCell.swift in Sources */,
