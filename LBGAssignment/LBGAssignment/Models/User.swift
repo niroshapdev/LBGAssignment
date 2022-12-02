@@ -27,5 +27,5 @@ struct Geo: Codable {
 }
 
 struct Company: Codable {
-    let name, catchPhrase, bs: String?
+    let name, catchPhrase, business: String?
 }

@@ -9,21 +9,18 @@ import XCTest
 @testable import LBGAssignment
 
 final class LBGAssignmentTests: XCTestCase {
-    
     var userViewModel: UserListViewModel?
     var users: [User]?
-    
+    private let parseError = "The data couldn’t be read because it isn’t in the correct format."
     override func setUpWithError() throws {
         userViewModel = UserListViewModel(service: LocalManager(jsonType: .valid))
         userViewModel?.getUserList()
         users = userViewModel?.users
     }
-    
     override func tearDownWithError() throws {
         userViewModel = nil
         users = nil
     }
-    
     func testUsers() throws {
         guard let users = users else {
             XCTAssertNil(users)
@@ -32,24 +29,20 @@ final class LBGAssignmentTests: XCTestCase {
         XCTAssertNotNil(users)
         XCTAssertGreaterThan(users.count, 0)
     }
-    
     func testUserDetail() {
         users?.forEach { user in
             XCTAssertNotNil(user.id)
             XCTAssertNotNil(user.email)
         }
     }
-    
     func testParticularUserDetail() {
         let user = users?.first
         XCTAssertEqual(user?.id ?? 0, 1)
         XCTAssertEqual(user?.email ?? "", "Nirosha@abc.com")
     }
-    
     func testURL() {
         XCTAssertEqual(Constants.APIConstants.UsersListUrl, "https://jsonplaceholder.typicode.com/users")
     }
-    
     func testInvalidJson() {
         let userViewModel = UserListViewModel(service: LocalManager(jsonType: .invalid))
         userViewModel.getUserList()
@@ -57,9 +50,8 @@ final class LBGAssignmentTests: XCTestCase {
         XCTAssertNil(users)
         let error = userViewModel.error
         XCTAssertNotNil(error)
-        XCTAssertEqual(error, APIError.custom(description: "The data couldn’t be read because it isn’t in the correct format."))
+        XCTAssertEqual(error, APIError.custom(description: parseError))
     }
-
     func testEmptyJson() {
         let userViewModel = UserListViewModel(service: LocalManager(jsonType: .empty))
         userViewModel.getUserList()
@@ -67,6 +59,6 @@ final class LBGAssignmentTests: XCTestCase {
         XCTAssertNil(users)
         let error = userViewModel.error
         XCTAssertNotNil(error)
-        XCTAssertEqual(error, APIError.custom(description: "The data couldn’t be read because it isn’t in the correct format."))
+        XCTAssertEqual(error, APIError.custom(description: parseError))
     }
 }
