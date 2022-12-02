@@ -9,7 +9,6 @@ import Foundation
 
 enum EndPoint: String {
     case users
-    
     func getUrl() -> String {
         switch self {
         case .users:

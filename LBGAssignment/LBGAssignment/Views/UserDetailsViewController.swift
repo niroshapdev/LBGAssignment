@@ -9,16 +9,13 @@ import Foundation
 import UIKit
 
 class UserDetailsViewController: UIViewController {
-    
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var company: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
-    
     var user: User?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

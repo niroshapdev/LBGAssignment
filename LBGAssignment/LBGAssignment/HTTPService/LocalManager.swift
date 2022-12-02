@@ -9,7 +9,6 @@ import Foundation
 
 enum JsonDataType {
     case empty, invalid, valid
-    
     var getFileName: String {
         switch self {
         case .empty:
@@ -23,12 +22,10 @@ enum JsonDataType {
 }
 
 class LocalManager: HTTPService {
-    
     var jsonType: JsonDataType
     init(jsonType: JsonDataType) {
         self.jsonType = jsonType
     }
-    
     func getData <T: Decodable>(_ endpoint: EndPoint, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
         let urlStr = Bundle.main.url(forResource: jsonType.getFileName, withExtension: "json")
         guard let url = urlStr else {

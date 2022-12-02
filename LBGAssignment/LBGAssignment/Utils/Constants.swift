@@ -8,27 +8,22 @@
 import Foundation
 
 struct Constants {
-    
-    static let Home_Screen_Title = "Users"
-    
+    static let UsersHomeScreenTitle = "Users"
     struct APIConstants {
         static let UsersListUrl = "https://jsonplaceholder.typicode.com/users"
     }
-    
     struct TableViewIdentifiers {
         static let UserListIdentifier = "UserListCustomCell"
     }
-    
     struct ViewControllerIdentifiers {
         static let UserDetailsViewControllerIdentifier = "UserDetailsViewController"
     }
 }
 
-enum APIError: Error, Equatable{
+enum APIError: Error, Equatable {
     case urlError
     case noData
     case custom(description: String)
-    
     func description() -> String {
         switch self {
         case .urlError:

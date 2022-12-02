@@ -13,14 +13,12 @@ protocol HTTPService {
 
 class NetworkManager: HTTPService {
     static let shared = NetworkManager()
-           
     func getData <T: Decodable>(_ endpoint: EndPoint, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
-        
         guard let url = URL(string: endpoint.getUrl()) else {
             result(.failure(APIError.urlError))
             return
         }
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
             guard let data = data else {
                 result(.failure(APIError.noData))
                 return
