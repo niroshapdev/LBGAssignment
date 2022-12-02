@@ -23,7 +23,7 @@ class UserListViewController: BaseViewController {
                 guard let self = self else { return }
                 self.hideActivityIndicator()
                 if let error = self.viewModel.error {
-                    self.showAlert(message: error.description())
+                    Utils.showAlert(on: self, message: error.description())
                     return
                 }
                 self.tableView?.reloadData()
