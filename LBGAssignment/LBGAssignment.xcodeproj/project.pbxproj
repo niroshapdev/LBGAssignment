@@ -433,6 +433,7 @@
 				C4889D012937598100E03D35 /* BaseViewController.swift in Sources */,
 				C4889CF22937598100E03D35 /* LocalManager.swift in Sources */,
 				C4889CF52937598100E03D35 /* Endpoint.swift in Sources */,
+				C47E672E2939DE470008D3C0 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
