@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 class UserDetailsViewController: UIViewController {
-    @IBOutlet private weak var userName: UILabel!
-    @IBOutlet private weak var company: UILabel!
-    @IBOutlet private weak var address: UILabel!
-    @IBOutlet private weak var phone: UILabel!
-    @IBOutlet private weak var name: UILabel!
-    @IBOutlet private weak var email: UILabel!
+    @IBOutlet var userName: UILabel!
+    @IBOutlet var company: UILabel!
+    @IBOutlet var address: UILabel!
+    @IBOutlet var phone: UILabel!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var email: UILabel!
     var user: User?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +24,16 @@ class UserDetailsViewController: UIViewController {
 
 extension UserDetailsViewController {
     private func setupUI() {
-        guard let user = user else { return }
-        self.navigationItem.title = user.username
-        userName.text = user.username
-        company.text = user.company?.name ?? ""
-        phone.text = user.phone
-        name.text = user.name
-        email.text = user.email
-        if let address = user.address {
-            self.address.text = address.city
+        if let user = user {
+            self.navigationItem.title = user.username
+            userName.text = user.username
+            company.text = user.company?.name ?? ""
+            phone.text = user.phone
+            name.text = user.name
+            email.text = user.email
+            if let address = user.address {
+                self.address.text = address.city
+            }
         }
     }
 }

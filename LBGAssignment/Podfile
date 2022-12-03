@@ -8,6 +8,7 @@ target 'LBGAssignment' do
   # Pods for LBGAssignment
 
     pod 'SwiftLint'
+    pod 'ProgressHUD'
 
   target 'LBGAssignmentTests' do
     inherit! :search_paths

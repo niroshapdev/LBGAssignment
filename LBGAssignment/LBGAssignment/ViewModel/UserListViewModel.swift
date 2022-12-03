@@ -17,7 +17,7 @@ class UserListViewModel {
         self.service = service
     }
     func getUserList() {
-        service.getData(EndPoint.users, type: Users.self) { [weak self] result in
+        service.getData(EndPoint.users.getUrl(), type: Users.self) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let users):

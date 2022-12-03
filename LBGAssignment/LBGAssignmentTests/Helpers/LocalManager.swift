@@ -8,7 +8,7 @@
 import Foundation
 
 enum JsonDataType {
-    case empty, invalid, valid
+    case empty, invalid, valid, noJson
     var getFileName: String {
         switch self {
         case .empty:
@@ -17,8 +17,14 @@ enum JsonDataType {
             return "Users_Invalid"
         case .valid:
             return "Users"
+        case .noJson:
+            return "_"
         }
     }
+}
+
+struct MockUsers: Decodable {
+    let user, userName: String
 }
 
 class LocalManager: HTTPService {
@@ -26,9 +32,10 @@ class LocalManager: HTTPService {
     init(jsonType: JsonDataType) {
         self.jsonType = jsonType
     }
-    func getData <T: Decodable>(_ endpoint: EndPoint, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
+    func getData <T: Decodable>(_ endpointUrl: String, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
         guard let testBundle = Bundle(identifier: "com.tcs.LBGAssignmentTests"),
               let url = testBundle.url(forResource: jsonType.getFileName, withExtension: "json") else {
+            result(.failure(APIError.custom(description: "Invalid URL")))
             return
         }
         do {
@@ -38,7 +45,13 @@ class LocalManager: HTTPService {
         } catch APIError.noData {
             result(.failure(APIError.noData))
         } catch {
-            result(.failure(APIError.custom(description: error.localizedDescription)))
+            if error is DecodingError {
+                result(.failure(APIError.custom(description: "Decoding Error")))
+            } else if error.localizedDescription == "The data couldn’t be read because it isn’t in the correct format." {
+                result(.failure(APIError.noData))
+            } else {
+                result(.failure(APIError.custom(description: error.localizedDescription)))
+            }
         }
     }
 }

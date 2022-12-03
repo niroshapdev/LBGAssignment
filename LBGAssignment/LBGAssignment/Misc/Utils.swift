@@ -8,15 +8,15 @@
 import UIKit
 
 class Utils {
-   static func showAlert(on controller: UIViewController, message: String, okAction: ((UIAlertAction) -> Void)? = nil) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: okAction)
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { _ in
-            controller.dismiss(animated: true)
-        }
-        alertController.addAction(okAction)
-        alertController.addAction(cancelAction)
-        controller.present(alertController, animated: true, completion: nil)
+    static func showAlert(on controller: UIViewController, title: String = "Error", message: String, okAction: ((UIAlertAction) -> Void)? = nil) {
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: okAction)
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { _ in
+                controller.dismiss(animated: true)
+            }
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            controller.present(alertController, animated: true, completion: nil)
     }
     static func isJailBrokenDevice() -> Bool {
         if TARGET_IPHONE_SIMULATOR != 1 {

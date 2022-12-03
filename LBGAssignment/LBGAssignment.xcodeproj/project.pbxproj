@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0E2E52DC9FB0F27FF8F73166 /* Pods_LBGAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36E5A9717EAC62FA3ECB0F2 /* Pods_LBGAssignment.framework */; };
 		16E0C66F1D05CC8D5D322633 /* Pods_LBGAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EDD1E44DDA6891F23CAAFF /* Pods_LBGAssignmentTests.framework */; };
+		C44B196F293B55D1006B80AA /* UserListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44B196E293B55D1006B80AA /* UserListViewControllerTests.swift */; };
+		C44B1974293B6F41006B80AA /* UserDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44B1972293B6F3B006B80AA /* UserDetailsViewControllerTests.swift */; };
+		C44B1975293B78D9006B80AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAC2937594E00E03D35 /* Main.storyboard */; };
 		C46D0FAC29376EB5000DE8E5 /* Users_Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */; };
 		C46D0FAE29378BBD000DE8E5 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */; };
 		C47E672D2939DE340008D3C0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E672C2939DE340008D3C0 /* APIError.swift */; };
@@ -67,6 +70,8 @@
 		85EDD1E44DDA6891F23CAAFF /* Pods_LBGAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBGAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C2F9136DA97091340346B6 /* Pods-LBGAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBGAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-LBGAssignmentTests/Pods-LBGAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		B36E5A9717EAC62FA3ECB0F2 /* Pods_LBGAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBGAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44B196E293B55D1006B80AA /* UserListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewControllerTests.swift; sourceTree = "<group>"; };
+		C44B1972293B6F3B006B80AA /* UserDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDetailsViewControllerTests.swift; path = LBGAssignmentTests/UserDetailsViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users_Invalid.json; sourceTree = "<group>"; };
 		C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users_Empty.json; sourceTree = "<group>"; };
 		C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
@@ -210,6 +215,8 @@
 				C47E67402939E54F0008D3C0 /* Helpers */,
 				C4889CBD2937595000E03D35 /* LBGAssignmentTests.swift */,
 				C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */,
+				C44B196E293B55D1006B80AA /* UserListViewControllerTests.swift */,
+				C44B1972293B6F3B006B80AA /* UserDetailsViewControllerTests.swift */,
 			);
 			path = LBGAssignmentTests;
 			sourceTree = "<group>";
@@ -298,6 +305,7 @@
 				C4889CA02937594E00E03D35 /* Frameworks */,
 				C4889CA12937594E00E03D35 /* Resources */,
 				C452934B2939D47E0030B990 /* ShellScript */,
+				03DAF8A4F1CD97A4CC5FFB94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,12 +403,30 @@
 				C46D0FAC29376EB5000DE8E5 /* Users_Empty.json in Resources */,
 				C47E67412939E58B0008D3C0 /* Users_Invalid.json in Resources */,
 				C4889CEC2937598100E03D35 /* Users.json in Resources */,
+				C44B1975293B78D9006B80AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03DAF8A4F1CD97A4CC5FFB94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LBGAssignment/Pods-LBGAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LBGAssignment/Pods-LBGAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LBGAssignment/Pods-LBGAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		28CC854CF0DCAF253CC5AA7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44B196F293B55D1006B80AA /* UserListViewControllerTests.swift in Sources */,
 				C4889D042937598100E03D35 /* UserDetailsViewController.swift in Sources */,
 				C4889D072937598100E03D35 /* UserListViewController.swift in Sources */,
 				C4889CEF2937598100E03D35 /* NetworkManager.swift in Sources */,
@@ -511,6 +538,7 @@
 				C4889CF22937598100E03D35 /* LocalManager.swift in Sources */,
 				C4889CF52937598100E03D35 /* Endpoint.swift in Sources */,
 				C47E672E2939DE470008D3C0 /* APIError.swift in Sources */,
+				C44B1974293B6F41006B80AA /* UserDetailsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

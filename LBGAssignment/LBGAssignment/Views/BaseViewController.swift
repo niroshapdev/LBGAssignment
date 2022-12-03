@@ -7,20 +7,16 @@
 
 import Foundation
 import UIKit
+import ProgressHUD
 
 class BaseViewController: UIViewController {
-    var activityIndicator = UIActivityIndicatorView(style: .large)
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     func showActivityIndicator() {
-        activityIndicator.center = view.center
-        activityIndicator.startAnimating()
-        view.addSubview(activityIndicator)
+        ProgressHUD.show(Constants.LoadingText)
     }
     func hideActivityIndicator() {
-        activityIndicator.stopAnimating()
-        activityIndicator.removeFromSuperview()
+        ProgressHUD.dismiss()
     }
 }

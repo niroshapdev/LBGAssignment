@@ -16,7 +16,7 @@ enum APIError: Error, Equatable {
         case .urlError:
             return "URL Error"
         case .custom(let description):
-            return "Custom Error : \(description)"
+            return description
         case .noData:
             return "Error in retrieving the data"
         }

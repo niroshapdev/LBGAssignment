@@ -9,15 +9,15 @@ import Foundation
 import UIKit
 
 class UserListViewController: BaseViewController {
-    private var viewModel = UserListViewModel()
-    @IBOutlet private weak var tableView: UITableView?
+    var viewModel = UserListViewModel()
+    @IBOutlet var tableView: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView?.delegate = self
         tableView?.dataSource = self
         updateUI()
     }
-    private func initailizeCompletion() {
+    func initailizeCompletion() {
         viewModel.completion = {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
@@ -27,13 +27,14 @@ class UserListViewController: BaseViewController {
                     return
                 }
                 self.tableView?.reloadData()
+                Utils.showAlert(on: self, title: Constants.SuccessAlert, message: "Retrieved \(self.viewModel.users?.count ?? 0) users from server")
             }
         }
     }
     private func updateUI() {
-        tableView?.accessibilityIdentifier = "UserListIdentifier"
-        self.navigationItem.title = Constants.UsersHomeScreenTitle
         self.showActivityIndicator()
+        tableView?.accessibilityIdentifier = Constants.AccessibilityIdentifiers.UserListIdentifier
+        self.navigationItem.title = Constants.UsersHomeScreenTitle
         initailizeCompletion()
         viewModel.getUserList()
     }
@@ -57,12 +58,12 @@ extension UserListViewController: UITableViewDataSource {
 
 extension UserListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: Constants.Main, bundle: .main)
         let identifier = Constants.ViewControllerIdentifiers.UserDetailsViewControllerIdentifier
-        guard let idvc: UserDetailsViewController = storyboard.instantiateViewController(withIdentifier: identifier) as? UserDetailsViewController,
-              let user = viewModel.users?[indexPath.row]
-        else { return }
-        idvc.user = user
-        show(idvc, sender: nil)
+        if let idvc: UserDetailsViewController = storyboard.instantiateViewController(withIdentifier: identifier) as? UserDetailsViewController,
+           let user = viewModel.users?[indexPath.row] {
+            idvc.user = user
+            show(idvc, sender: nil)
+        }
     }
 }
