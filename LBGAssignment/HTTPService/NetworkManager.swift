@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol HTTPService {
-    func getData <T: Decodable>(_ endpointUrl: String, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void))
-}
-
 class NetworkManager: HTTPService {
     static let shared = NetworkManager()
     func getData <T: Decodable>(_ endpointUrl: String, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {

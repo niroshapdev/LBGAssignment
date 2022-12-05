@@ -20,3 +20,7 @@ Run ```pod install``` before running the project.
 1. Dependency Injection
 1. SOLID Principles (where ever possible)
 1. Unit tests for ViewModels - 100% coverage
+
+## Future implementations
+1. Providing offline storage
+1. Impressive UI design
