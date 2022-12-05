@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 class UserListCustomCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel?
-    @IBOutlet weak var emailLabel: UILabel?
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
+    func configureCell(with name: String, email: String) {
+        self.nameLabel.text = name
+        self.emailLabel.text = email
+    }
 }

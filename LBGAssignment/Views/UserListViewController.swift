@@ -10,7 +10,7 @@ import UIKit
 
 class UserListViewController: BaseViewController {
     var viewModel = UserListViewModel()
-    @IBOutlet var tableView: UITableView?
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView?.delegate = self
@@ -49,9 +49,10 @@ extension UserListViewController: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
+        let name = viewModel.users?[indexPath.row].name ?? ""
+        let email = viewModel.users?[indexPath.row].email ?? ""
         userCell.accessibilityIdentifier = "userCell_\(indexPath.row)"
-        userCell.nameLabel?.text = viewModel.users?[indexPath.row].name
-        userCell.emailLabel?.text = viewModel.users?[indexPath.row].email
+        userCell.configureCell(with: name, email: email)
         return userCell
     }
 }
