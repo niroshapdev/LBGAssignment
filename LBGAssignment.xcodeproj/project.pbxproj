@@ -197,7 +197,7 @@
 			children = (
 				C4889CDD2937598000E03D35 /* Models */,
 				C4889CD92937597F00E03D35 /* HTTPService */,
-				C4889CD62937597F00E03D35 /* Misc */,
+				C4889CD62937597F00E03D35 /* Miscellaneous */,
 				C4889CE02937598100E03D35 /* ViewModel */,
 				C4889CE22937598100E03D35 /* Views */,
 				C4889CA62937594E00E03D35 /* AppDelegate.swift */,
@@ -221,14 +221,14 @@
 			path = LBGAssignmentTests;
 			sourceTree = "<group>";
 		};
-		C4889CD62937597F00E03D35 /* Misc */ = {
+		C4889CD62937597F00E03D35 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
 				C4889CD72937597F00E03D35 /* Constants.swift */,
 				C47E672C2939DE340008D3C0 /* APIError.swift */,
 				C47E67442939EA000008D3C0 /* Utils.swift */,
 			);
-			path = Misc;
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		C4889CD92937597F00E03D35 /* HTTPService */ = {

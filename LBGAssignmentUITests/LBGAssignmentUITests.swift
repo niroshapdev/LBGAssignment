@@ -32,8 +32,6 @@ final class LBGAssignmentUITests: XCTestCase {
         let myTable = app.tables.matching(identifier: "UserListIdentifier")
         let cell = myTable.cells.element(matching: .cell, identifier: "userCell_0")
         cell.tap()
-        //      let chinaZunPredicate = NSPredicate(format: "label beginswith 'China Zun'")
-        //      app.tables.buttons.element(matching: chinaZunPredicate).tap()
         XCTAssert(app.staticTexts["Bret"].exists)
         XCTAssert(app.staticTexts["Romaguera-Crona"].exists)
         XCTAssert(app.staticTexts["Gwenborough"].exists)

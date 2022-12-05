@@ -1,2 +1,19 @@
+.DS_STORE
+
+# Private Keys
+*.pem
+
+# Cocoaods
 Pods
+Podfile.lock
+Footer
+
+# Xcode
+Xcuserdata/
+LBGAssignment.xcworkspace/
+DerivedData/
 LBGAssignment.xcodeproj/xcuserdata
+
+# build products
+build/
+*.[oa]
