@@ -13,6 +13,9 @@ Minimum iOS Deployment Target - 14.0
 ## Architectural Design Patterns
 Architecture implemented - MVVM
 
+## Note
+Run ```pod install``` before running the project.
+
 ## Features 
 1. Dependency Injection
 1. SOLID Principles (where ever possible)
