@@ -8,24 +8,25 @@
 import Foundation
 import UIKit
 
+protocol UserListViewModelDelegate: AnyObject {
+    func requestDidSucceed(with users: Users)
+    func requestDidFinishWithError(with error: APIError)
+}
 class UserListViewModel {
-    private var service: HTTPService
-    private(set) var users: Users?
-    private(set) var error: APIError?
-    var completion: (() -> Void)?
-    init(service: HTTPService = NetworkManager()) {
-        self.service = service
+    private var dataService: DataServiceProtocol
+    weak var delegate: UserListViewModelDelegate?
+    init(service: DataServiceProtocol = NetworkManager()) {
+        self.dataService = service
     }
     func getUserList() {
-        service.getData(EndPoint.users.getUrl(), type: Users.self) { [weak self] result in
+        dataService.getData(APIEndPoint(path: Constants.APIConstants.UsersListUrl), type: Users.self) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let users):
-                self.users = users
+                self.delegate?.requestDidSucceed(with: users)
             case .failure(let error):
-                self.error = error
+                self.delegate?.requestDidFinishWithError(with: error)
             }
-            self.completion?()
         }
     }
 }

@@ -20,9 +20,6 @@ class UserDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-}
-
-extension UserDetailsViewController {
     private func setupUI() {
         if let user = user {
             self.navigationItem.title = user.username

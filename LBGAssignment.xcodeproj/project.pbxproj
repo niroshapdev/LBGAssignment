@@ -14,14 +14,13 @@
 		C44B1975293B78D9006B80AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAC2937594E00E03D35 /* Main.storyboard */; };
 		C46D0FAC29376EB5000DE8E5 /* Users_Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */; };
 		C46D0FAE29378BBD000DE8E5 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */; };
-		C47D5616293E4AFE00497171 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D5615293E4AFE00497171 /* HTTPService.swift */; };
+		C47D5616293E4AFE00497171 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D5615293E4AFE00497171 /* DataServiceProtocol.swift */; };
 		C47E672D2939DE340008D3C0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E672C2939DE340008D3C0 /* APIError.swift */; };
 		C47E672E2939DE470008D3C0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E672C2939DE340008D3C0 /* APIError.swift */; };
 		C47E67412939E58B0008D3C0 /* Users_Invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */; };
 		C47E67452939EA000008D3C0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E67442939EA000008D3C0 /* Utils.swift */; };
 		C47E67462939EFB30008D3C0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E67442939EA000008D3C0 /* Utils.swift */; };
 		C47E674E2939FA490008D3C0 /* LBGAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E674D2939FA490008D3C0 /* LBGAssignmentUITests.swift */; };
-		C47E67502939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E674F2939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift */; };
 		C4889CA72937594E00E03D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CA62937594E00E03D35 /* AppDelegate.swift */; };
 		C4889CAE2937594E00E03D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAC2937594E00E03D35 /* Main.storyboard */; };
 		C4889CB02937595000E03D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4889CAF2937595000E03D35 /* Assets.xcassets */; };
@@ -33,8 +32,8 @@
 		C4889CEE2937598100E03D35 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDA2937597F00E03D35 /* NetworkManager.swift */; };
 		C4889CEF2937598100E03D35 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDA2937597F00E03D35 /* NetworkManager.swift */; };
 		C4889CF22937598100E03D35 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDB2937597F00E03D35 /* LocalManager.swift */; };
-		C4889CF42937598100E03D35 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDC2937597F00E03D35 /* Endpoint.swift */; };
-		C4889CF52937598100E03D35 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDC2937597F00E03D35 /* Endpoint.swift */; };
+		C4889CF42937598100E03D35 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDC2937597F00E03D35 /* APIEndpoint.swift */; };
+		C4889CF52937598100E03D35 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDC2937597F00E03D35 /* APIEndpoint.swift */; };
 		C4889CF72937598100E03D35 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDE2937598000E03D35 /* User.swift */; };
 		C4889CF82937598100E03D35 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CDE2937598000E03D35 /* User.swift */; };
 		C4889CFD2937598100E03D35 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CE12937598100E03D35 /* UserListViewModel.swift */; };
@@ -47,6 +46,9 @@
 		C4889D072937598100E03D35 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CE52937598100E03D35 /* UserListViewController.swift */; };
 		C4889D092937598100E03D35 /* UserListCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CE72937598100E03D35 /* UserListCustomCell.swift */; };
 		C4889D0A2937598100E03D35 /* UserListCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4889CE72937598100E03D35 /* UserListCustomCell.swift */; };
+		C4A8B94A294344530050084A /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D5615293E4AFE00497171 /* DataServiceProtocol.swift */; };
+		C4A8B94D29434D920050084A /* APIEndpoint+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A8B94C29434D920050084A /* APIEndpoint+Users.swift */; };
+		C4A8B9502944ED470050084A /* APIEndpoint+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A8B94C29434D920050084A /* APIEndpoint+Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,12 +78,11 @@
 		C46D0FA829376DF7000DE8E5 /* Users_Invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users_Invalid.json; sourceTree = "<group>"; };
 		C46D0FAA29376EB5000DE8E5 /* Users_Empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users_Empty.json; sourceTree = "<group>"; };
 		C46D0FAD29378BBD000DE8E5 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
-		C47D5615293E4AFE00497171 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		C47D5615293E4AFE00497171 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		C47E672C2939DE340008D3C0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		C47E67442939EA000008D3C0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C47E674B2939FA490008D3C0 /* LBGAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBGAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47E674D2939FA490008D3C0 /* LBGAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBGAssignmentUITests.swift; sourceTree = "<group>"; };
-		C47E674F2939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBGAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4889CA32937594E00E03D35 /* LBGAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBGAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4889CA62937594E00E03D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4889CAD2937594E00E03D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,13 +95,14 @@
 		C4889CD82937597F00E03D35 /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
 		C4889CDA2937597F00E03D35 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C4889CDB2937597F00E03D35 /* LocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
-		C4889CDC2937597F00E03D35 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C4889CDC2937597F00E03D35 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		C4889CDE2937598000E03D35 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C4889CE12937598100E03D35 /* UserListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		C4889CE32937598100E03D35 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C4889CE42937598100E03D35 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		C4889CE52937598100E03D35 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		C4889CE72937598100E03D35 /* UserListCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListCustomCell.swift; sourceTree = "<group>"; };
+		C4A8B94C29434D920050084A /* APIEndpoint+Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoint+Users.swift"; sourceTree = "<group>"; };
 		C7C2E6DE858933B89AFEEDD9 /* Pods-LBGAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBGAssignment.release.xcconfig"; path = "Target Support Files/Pods-LBGAssignment/Pods-LBGAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		CEF033E701EF97F769058D6E /* Pods-LBGAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBGAssignment.debug.xcconfig"; path = "Target Support Files/Pods-LBGAssignment/Pods-LBGAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				C47E674D2939FA490008D3C0 /* LBGAssignmentUITests.swift */,
-				C47E674F2939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift */,
 			);
 			path = LBGAssignmentUITests;
 			sourceTree = "<group>";
@@ -198,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C4889CDD2937598000E03D35 /* Models */,
-				C4889CD92937597F00E03D35 /* HTTPService */,
+				C4889CD92937597F00E03D35 /* Networking */,
 				C4889CD62937597F00E03D35 /* ExtensionsAndUtilities */,
 				C4889CE02937598100E03D35 /* ViewModel */,
 				C4889CE22937598100E03D35 /* Views */,
@@ -233,14 +234,15 @@
 			path = ExtensionsAndUtilities;
 			sourceTree = "<group>";
 		};
-		C4889CD92937597F00E03D35 /* HTTPService */ = {
+		C4889CD92937597F00E03D35 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C47D5615293E4AFE00497171 /* HTTPService.swift */,
-				C4889CDC2937597F00E03D35 /* Endpoint.swift */,
+				C4889CDC2937597F00E03D35 /* APIEndpoint.swift */,
+				C4A8B94B29434D7B0050084A /* Users */,
+				C47D5615293E4AFE00497171 /* DataServiceProtocol.swift */,
 				C4889CDA2937597F00E03D35 /* NetworkManager.swift */,
 			);
-			path = HTTPService;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		C4889CDD2937598000E03D35 /* Models */ = {
@@ -276,6 +278,14 @@
 				C4889CE72937598100E03D35 /* UserListCustomCell.swift */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		C4A8B94B29434D7B0050084A /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				C4A8B94C29434D920050084A /* APIEndpoint+Users.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,7 +509,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47E674E2939FA490008D3C0 /* LBGAssignmentUITests.swift in Sources */,
-				C47E67502939FA490008D3C0 /* LBGAssignmentUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,19 +516,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4889CF42937598100E03D35 /* Endpoint.swift in Sources */,
+				C4889CF42937598100E03D35 /* APIEndpoint.swift in Sources */,
 				C4889D032937598100E03D35 /* UserDetailsViewController.swift in Sources */,
 				C4889D002937598100E03D35 /* BaseViewController.swift in Sources */,
 				C4889CA72937594E00E03D35 /* AppDelegate.swift in Sources */,
 				C4889CEE2937598100E03D35 /* NetworkManager.swift in Sources */,
 				C47E672D2939DE340008D3C0 /* APIError.swift in Sources */,
+				C4A8B94D29434D920050084A /* APIEndpoint+Users.swift in Sources */,
 				C4889CF72937598100E03D35 /* User.swift in Sources */,
 				C4889D062937598100E03D35 /* UserListViewController.swift in Sources */,
 				C4889CE82937598100E03D35 /* Constants.swift in Sources */,
 				C4889CFD2937598100E03D35 /* UserListViewModel.swift in Sources */,
 				C4889D092937598100E03D35 /* UserListCustomCell.swift in Sources */,
 				C47E67452939EA000008D3C0 /* Utils.swift in Sources */,
-				C47D5616293E4AFE00497171 /* HTTPService.swift in Sources */,
+				C47D5616293E4AFE00497171 /* DataServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,15 +542,17 @@
 				C4889D072937598100E03D35 /* UserListViewController.swift in Sources */,
 				C4889CEF2937598100E03D35 /* NetworkManager.swift in Sources */,
 				C47E67462939EFB30008D3C0 /* Utils.swift in Sources */,
+				C4A8B94A294344530050084A /* DataServiceProtocol.swift in Sources */,
 				C4889CFE2937598100E03D35 /* UserListViewModel.swift in Sources */,
 				C4889CBE2937595000E03D35 /* LBGAssignmentTests.swift in Sources */,
+				C4A8B9502944ED470050084A /* APIEndpoint+Users.swift in Sources */,
 				C4889D0A2937598100E03D35 /* UserListCustomCell.swift in Sources */,
 				C46D0FAE29378BBD000DE8E5 /* NetworkTests.swift in Sources */,
 				C4889CF82937598100E03D35 /* User.swift in Sources */,
 				C4889CE92937598100E03D35 /* Constants.swift in Sources */,
 				C4889D012937598100E03D35 /* BaseViewController.swift in Sources */,
 				C4889CF22937598100E03D35 /* LocalManager.swift in Sources */,
-				C4889CF52937598100E03D35 /* Endpoint.swift in Sources */,
+				C4889CF52937598100E03D35 /* APIEndpoint.swift in Sources */,
 				C47E672E2939DE470008D3C0 /* APIError.swift in Sources */,
 				C44B1974293B6F41006B80AA /* UserDetailsViewControllerTests.swift in Sources */,
 			);
@@ -752,6 +764,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -783,6 +796,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

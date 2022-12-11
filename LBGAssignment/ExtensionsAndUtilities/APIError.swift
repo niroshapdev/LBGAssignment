@@ -8,17 +8,20 @@
 import Foundation
 
 enum APIError: Error, Equatable {
-    case urlError
-    case noData
+    case invalidUrl
+    case invalidServerResponse
+    case decodingError
     case custom(description: String)
     func description() -> String {
         switch self {
-        case .urlError:
-            return "URL Error"
+        case .invalidUrl:
+            return "Invalid url"
+        case .invalidServerResponse:
+            return "Invalid server response"
+        case .decodingError:
+            return "Decoding Error"
         case .custom(let description):
             return description
-        case .noData:
-            return "Error in retrieving the data"
         }
     }
 }

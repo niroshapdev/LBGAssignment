@@ -27,28 +27,24 @@ struct MockUsers: Decodable {
     let user, userName: String
 }
 
-class LocalManager: HTTPService {
+class LocalManager: DataServiceProtocol {
     var jsonType: JsonDataType
     init(jsonType: JsonDataType) {
         self.jsonType = jsonType
     }
-    func getData <T: Decodable>(_ endpointUrl: String, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
-        guard let testBundle = Bundle(identifier: "com.tcs.LBGAssignmentTests"),
-              let url = testBundle.url(forResource: jsonType.getFileName, withExtension: "json") else {
-            result(.failure(APIError.custom(description: "Invalid URL")))
+    func getData <T: Decodable>(_ endpoint: APIEndPoint, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
+        let testBundle = Bundle(for: LocalManager.self)
+        guard let url = testBundle.url(forResource: jsonType.getFileName, withExtension: "json") else {
+            result(.failure(APIError.invalidUrl))
             return
         }
         do {
             let data = try Data(contentsOf: url)
             let parsedData = try JSONDecoder().decode(T.self, from: data)
             result(.success(parsedData))
-        } catch APIError.noData {
-            result(.failure(APIError.noData))
         } catch {
             if error is DecodingError {
-                result(.failure(APIError.custom(description: "Decoding Error")))
-            } else if error.localizedDescription == "The data couldn’t be read because it isn’t in the correct format." {
-                result(.failure(APIError.noData))
+                result(.failure(APIError.decodingError))
             } else {
                 result(.failure(APIError.custom(description: error.localizedDescription)))
             }

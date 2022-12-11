@@ -7,16 +7,13 @@
 
 import Foundation
 
-class NetworkManager: HTTPService {
+class NetworkManager: DataServiceProtocol {
     static let shared = NetworkManager()
-    func getData <T: Decodable>(_ endpointUrl: String, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
-        guard let url = URL(string: endpointUrl) else {
-            result(.failure(APIError.urlError))
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
+    var endpoint: APIEndPoint?
+    func getData <T: Decodable>(_ endpoint: APIEndPoint, type: T.Type, result: @escaping ((Result<T, APIError>) -> Void)) {
+        let task = URLSession.shared.dataTask(with: endpoint.url) { (data, _, error) in
             guard let data = data else {
-                result(.failure(APIError.noData))
+                result(.failure(APIError.invalidServerResponse))
                 return
             }
             if let error = error {
@@ -27,7 +24,7 @@ class NetworkManager: HTTPService {
                 let parsedData = try JSONDecoder().decode(T.self, from: data)
                 result(.success(parsedData))
             } catch {
-                result(.failure(.custom(description: error.localizedDescription)))
+                result(.failure(APIError.decodingError))
             }
         }
         task.resume()

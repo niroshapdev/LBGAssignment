@@ -14,7 +14,8 @@ struct Constants {
     static let Main = "Main"
     static let LoadingText = "Loading..."
     struct APIConstants {
-        static let UsersListUrl = "https://jsonplaceholder.typicode.com/users"
+        static let BaseUrl = "https://jsonplaceholder.typicode.com/"
+        static let UsersListUrl = "users"
     }
     struct TableViewIdentifiers {
         static let UserListIdentifier = "UserListCustomCell"

@@ -14,6 +14,12 @@ final class UserDetailsViewControllerTests: XCTestCase {
     var userDetailsVC: UserDetailsViewControllerStub!
     override func setUpWithError() throws {
         userDetailsVC = UserDetailsViewControllerStub()
+        loadDataFromStub()
+    }
+    override func tearDownWithError() throws {
+        userDetailsVC = nil
+    }
+    func loadDataFromStub() {
         userDetailsVC.userName = UILabel(frame: .zero)
         userDetailsVC.name = UILabel(frame: .zero)
         userDetailsVC.email = UILabel(frame: .zero)
@@ -21,11 +27,6 @@ final class UserDetailsViewControllerTests: XCTestCase {
         userDetailsVC.address = UILabel(frame: .zero)
         userDetailsVC.phone = UILabel(frame: .zero)
     }
-
-    override func tearDownWithError() throws {
-        userDetailsVC = nil
-    }
-
     func testSetupUI() throws {
         userDetailsVC.user = User(id: 1,
                                    name: "Tom",

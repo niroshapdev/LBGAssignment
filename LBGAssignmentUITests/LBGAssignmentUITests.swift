@@ -14,20 +14,11 @@ final class LBGAssignmentUITests: XCTestCase {
         continueAfterFailure = false
         app.launch()
     }
-//    func testNavigationBar() throws {
-//        let navigationBar = app.navigationBars["Users"]
-//        app.tables
-//            .element(boundBy: 0)
-//            .cells
-//            .element(boundBy: 0)
-//            .tap()
-//        app.navigationBars["UserDetailsViewController"]
-//    }
-//    func testNavigation() {
-//        let myTable = app.tables.matching(identifier: "UserListIdentifier")
-//        let cell = myTable.cells.element(matching: .cell, identifier: "userCell_0")
-//        cell.tap()
-//    }
+    func testNavigation() {
+        let myTable = app.tables.matching(identifier: "UserListIdentifier")
+        let cell = myTable.cells.element(matching: .cell, identifier: "userCell_0")
+        cell.tap()
+    }
     func testUserDetailView() {
         let myTable = app.tables.matching(identifier: "UserListIdentifier")
         let cell = myTable.cells.element(matching: .cell, identifier: "userCell_0")
